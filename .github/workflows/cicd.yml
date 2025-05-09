@@ -1,0 +1,49 @@
+on: 
+  push:
+    branches:
+      - main
+name: 🚀 Deploy website on push
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy website
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout the repository
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    #htm
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install htmlhint
+      run: npm install -g htmlhint
+
+    - name: Find and lint HTML in PHP files
+      run: |
+        find . -name "*.php" -exec sh -c 'htmlhint <(grep -oP "(?<=<html>).*?(?=</html>)" {})' \;
+    # validate PHP syntax
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.0' # Specify the PHP version you are using
+
+    - name: Validate PHP syntax
+      run: |
+        find . -name "*.php" -print0 | xargs -0 -n1 php -l
+    
+    # # Validate HTML syntax
+    # - name: Run HTML validation
+    #   run: |
+    #     docker pull ghcr.io/validator/validator:latest
+    #     docker run --rm -v "${{ github.workspace }}":/site ghcr.io/validator/validator:latest java -jar ~/vnu.jar --skip-non-html 
+    # sync files via FTP
+    - name: 📂 Sync files via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /public_html/L5SW/Amna/
