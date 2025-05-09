@@ -1,32 +1,31 @@
 <?php
- 
- ob_start();
+ob_start();
 
- 
- require_once
-    require 'DB.php';
-    ini_set("display_errors", 1);
+// Include your DB connection (adjust path if needed)
+require_once 'DB.php';
+ini_set('display_errors', 1);
 
-    $db = new DB;
- 
-    if(isset($_POST['submit']))
-    {
-        $query = $db->connect()->prepare("INSERT INTO SM (comment) VALUES (:comment)");
-        $query->bindParam(":comment", $_POST['comment'], PDO::PARAM_STR);
-        $query->execute();
-    }
+$db = new DB;
 
-    $comments = array();
- 
-    $query = $db->connect()->query("SELECT * FROM SM");
- 
-    while($row = $query->fetch(PDO::FETCH_ASSOC))
-    {
-        $comments[] = $row['comment'];
-    }
-    ob_end_flush();
+// Handle form submission
+if (isset($_POST['submit'])) {
+    $conn  = $db->connect();
+    $stmt  = $conn->prepare("INSERT INTO SM (comment) VALUES (:comment)");
+    $stmt->bindParam(':comment', $_POST['comment'], PDO::PARAM_STR);
+    $stmt->execute();
+}
+
+// Fetch all comments
+$comments = [];
+$conn     = $db->connect();
+$query    = $conn->query("SELECT * FROM SM");
+
+while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+    $comments[] = $row['comment'];
+}
+
+ob_end_flush();
 ?>
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,17 +35,20 @@
 </head>
 <body>
     <h2>XSS Stored Demo</h2>
- 
-    <form method="POST">
-        <input type="text" placeholder="Enter a Comment" name="comment">
-        <input type="submit" name="submit" value="submit">
+
+    <form method="POST" action="">
+        <input type="text" name="comment" placeholder="Enter a Comment" required>
+        <input type="submit" name="submit" value="Submit">
     </form>
- 
-    <?php foreach($comments as $comment): ?>
-        <?= $comment ?>
-        <?=htmlspecialchars($comment)?>
-        <br>
-    <? endforeach ?>
- 
+
+    <h3>Comments:</h3>
+    <?php foreach ($comments as $comment): ?>
+        <!-- Unsafe: raw output -->
+        <div><?php echo $comment; ?></div>
+        <!-- Safe: escaped output -->
+        <div><?php echo htmlspecialchars($comment, ENT_QUOTES | ENT_HTML5, 'UTF-8'); ?></div>
+        <hr>
+    <?php endforeach; ?>
+
 </body>
 </html>
