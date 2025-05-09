@@ -44,5 +44,5 @@ ob_end_flush();
       <p><?php echo htmlspecialchars($comment, ENT_QUOTES, 'UTF-8'); ?></p>
     <?php endforeach; ?>
   </div>
-</body>
-</html>
+  </body>
+  </html>
