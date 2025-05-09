@@ -1,0 +1,1757 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px; /* Adjust this value to fit your design */
+    object-fit: cover; /* Ensures the images cover the area without stretching */
+    margin-bottom: 10px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.quantity-controls button,
+.quantity-input {
+    display: inline-block;
+    margin: 5px;
+}
+
+.add-to-basket-btn,
+.btn-info {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    background-color: #939d9f;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.container {
+    height: 100vh; /* Full height */
+    display: flex;
+    align-items: center; /* Align vertically */
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background-color: #343a40;
+    color: #007bff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: #023047;
+    color: #d4e0e0;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Main Content Styling */
+main {
+    width: 85%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #023047;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.basket-product-image {
+    width: 60px;
+    height: auto;
+}
+
+/* Button Styling */
+.quantity-btn, .delete-btn, .save-btn, .move-btn, .checkout-btn {
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #fb8500;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.quantity-btn:hover, .delete-btn:hover, .save-btn:hover, .move-btn:hover, .checkout-btn:hover {
+    background-color: #ffba08;
+}
+
+/* Actions Area */
+.basket-actions {
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .basket-product-image {
+        width: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fefae0; /* Light warm background */
+    color: #023047; /* Dark blue for text */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #023047; /* Navy blue */
+    color: #ffffff; /* White text for contrast */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff; /* White background for form */
+    padding: 20px;
+    width: 320px; /* Slightly wider for better layout */
+    margin: 40px auto; /* More vertical space */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+}
+
+input[type=email], input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0; /* More vertical space */
+    display: inline-block;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Slightly rounded */
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* Smooth transition for focus */
+}
+
+input[type=email]:focus, input[type=text]:focus, input[type=password]:focus {
+    border-color: #fb8500; /* Highlighted border on focus */
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #fb8500; /* Bright orange button */
+    color: white;
+    padding: 14px 20px;
+    margin: 12px 0; /* More vertical space */
+    border: none;
+    border-radius: 5px; /* Slightly rounded */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth color transition on hover */
+}
+
+input[type=submit]:hover {
+    background-color: #ffba08; /* Lighter orange on hover */
+}
+
+/* Error and Success Message Styling */
+.error-message, .success-message {
+    font-size: 16px;
+    margin: 10px 0; /* More vertical space */
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: #d32f2f; /* Red for errors */
+    background-color: #ffebee; /* Light red background */
+}
+
+.success-message {
+    color: #388e3c; /* Green for success */
+    background-color: #e8f5e9; /* Light green background */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light gray background for a softer look */
+}
+
+/* Header Styles */
+header {
+    background-color: #264653; /* Deep blue-green */
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Main Container for Centering the Form */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 60px); /* Adjust based on the height of your header/footer */
+}
+
+/* Form Styling */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+/* Form Header */
+form h2 {
+    text-align: center;
+    color: #264653; /* Echoing the header color for consistency */
+}
+
+/* Input Fields Styling */
+input[type=email], input[type=password], input[type=text] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #eef6f6; /* Very light cyan for input backgrounds */
+}
+
+/* Focus on Input Fields */
+input[type=email]:focus, input[type=password]:focus, input[type=text]:focus {
+    outline: none;
+    border-color: #2a9d8f; /* Soft teal for focus */
+}
+
+/* Button Styling */
+input[type=submit] {
+    width: 100%;
+    background-color: #2a9d8f; /* Soft teal */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type=submit]:hover {
+    background-color: #264653; /* Darker tone on hover for contrast */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    form {
+        width: 85%;
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Soft gray for a light, neutral background */
+    color: #333; /* Dark gray for text, ensures good readability */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Styling */
+h1 {
+    color: #264653; /* Deep blue-green, consistent with the branding */
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    background: #ffffff;
+    padding: 20px;
+    margin: auto;
+    width: 50%; /* Adjusts the form width to fit modern design */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px;
+}
+
+form label {
+    font-weight: bold; /* Makes labels more prominent */
+}
+
+input[type=text], input[type=file] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Handles the width including padding */
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #2a9d8f; /* Soft teal, appealing and consistent */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type=submit]:hover {
+    background-color: #264653; /* Darker tone on hover for better interaction feedback */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    form {
+        width: 90%; /* More responsive on smaller devices */
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-input {
+    width: 40px; /* Adjust width as needed */
+    text-align: center;
+}
+
+.quantity-minus, .quantity-plus {
+    font-size: 16px;
+    color: white;
+    background-color: #007bff; /* Bootstrap primary color */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity-minus:hover, .quantity-plus:hover {
+    background-color: #0056b3; /* Darken color on hover */
+}
+
+.add-to-basket-btn {
+    width: 100%; /* Full width within the form */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header and navigation styles */
+.nav-bar {
+    background-color: #007BFF;
+    padding: 10px 20px;
+    color: white;
+}
+
+.title a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main content area */
+main {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+/* Table styling for basket and saved items */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
+/* Styling for product images in tables */
+.basket-product-image {
+    width: 50px;
+    height: auto;
+}
+
+/* Quantity button styling */
+.quantity-actions {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn, .delete-btn, .save-btn, .move-btn {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.quantity-btn:hover, .delete-btn:hover, .save-btn:hover, .move-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the basket actions */
+.basket-actions {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.checkout-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background-color: #218838;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f8f8f8;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: 'Georgia', serif;
+    color: #333;
+    background-color: #f4f4f2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #70483c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+nav h1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.info-box {
+    background-color: white;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 90%;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-card {
+    width: 30%;
+    margin: 1%;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+}
+
+.button-group button, .button-group input {
+    padding: 8px 12px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: #8d734b;
+    color: white;
+    cursor: pointer;
+}
+
+.add-to-basket-btn, .btn {
+    background-color: #8d734b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #272822;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 800px) {
+    .product-card {
+        width: 48%; /* Adjust to take half width on smaller screens */
+        margin: 1%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* About Us Section Styles */
+#about-us h2, #contact-info h2 {
+    color: #333;
+}
+
+.about-box, .contact-box {
+    margin-top: 20px;
+    padding: 10px;
+    border-left: 4px solid #5C9210;
+}
+
+.about-box h3, .contact-box h3 {
+    color: #5C9210;
+}
+
+.about-box p, .contact-box p, #about-us p {
+    line-height: 1.6;
+}
+
+.about-box ul {
+    padding-left: 20px;
+}
+
+.about-box li {
+    margin-bottom: 10px;
+}
+
+/* Contact Information Section Styles */
+.contact-box {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-bar a {
+        padding: 10px;
+    }
+
+    section {
+        margin: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Basic Layout and Typography */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Main Content Area */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #5C9210;
+    color: white;
+}
+
+/* Responsive Image Settings */
+img {
+    width: 100px;
+    height: auto;
+}
+
+/* Links and Button Styling */
+a, button {
+    color: #5C9210;
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+a:hover, button:hover {
+    background-color: #407007;
+    color: white;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .nav-bar a, button {
+        font-size: 14px;
+    }
+
+    main, header, footer {
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Basic Reset */
+body, h1, form, input {
+    margin: 0;
+    padding: 0;
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header and Navigation Bar */
+header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+/* Main Form Styling */
+form {
+    background-color: white;
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type='email'], input[type='text'], input[type='password'] {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    margin-bottom: 10px; /* Space between inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type='submit'] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #5C9210;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type='submit']:hover {
+    background-color: #407007;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    header {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card-header {
+    background-color: #17a2b8 !important;
+}
+
+/* General styling */
+body {
+    background-color: #f4f7fa; /* Soothing background color */
+    font-family: 'Arial', sans-serif; /* Clean and readable font */
+}
+
+header {
+    background: #007bff; /* Deep blue header to match Bootstrap's primary blue */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px; /* Larger text for header */
+}
+
+/* Container styling */
+.container {
+    padding-top: 50px; /* Space from top */
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: none; /* Remove default border */
+}
+
+.card-header {
+    background-color: #17a2b8; /* Bootstrap's info color for a refreshing look */
+    color: #fff;
+    font-size: 20px;
+}
+
+.form-group label {
+    font-weight: bold; /* Make labels bold for better readability */
+}
+
+.input-group-text {
+    background-color: #17a2b8; /* Match the card header */
+    border: none; /* Remove default border */
+    color: white;
+}
+
+.form-control {
+    border-radius: 0.25rem; /* Consistent rounded borders */
+    border: 2px solid #ced4da; /* Slightly thicker border for inputs */
+}
+
+/* Styling for the login button */
+.btn-primary {
+    background-color: #0069d9; /* Slightly darker than Bootstrap primary for contrast */
+    border-color: #0062cc; /* Matching border color */
+    padding: 10px 15px; /* Padding for better touch */
+    font-size: 18px; /* Larger font size for readability */
+    width: 100%; /* Full width for a more substantial button */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+    border-color: #0050a1;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .header {
+        font-size: 20px; /* Smaller font size on small devices */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    padding-top: 2rem;
+}
+
+h2 {
+    color: #333;
+}
+
+.form-control {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: #0069d9;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General background color and font settings */
+body {
+    background-color: #f5f5f5; /* Lighter grey background for a softer look */
+    font-family: 'Arial', sans-serif; /* Consistent, readable font */
+    color: #333; /* Dark grey text for better readability */
+}
+
+/* Header style */
+header {
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Main container for centering the login form */
+main .container {
+    max-width: 400px; /* Restricts the form width for better aesthetics */
+    margin: 50px auto; /* Center the form vertically and horizontally */
+    padding: 20px;
+    background-color: #ffffff; /* White background for the form area */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    border-radius: 5px; /* Slightly rounded corners for a softer look */
+}
+
+/* Styling for form elements */
+form {
+    margin-top: 20px;
+}
+
+.form-group label {
+    font-weight: bold; /* Makes labels bold for clarity */
+}
+
+/* Enhance input fields for better interaction */
+input[type="email"], input[type="password"] {
+    width: 100%; /* Full width fields */
+    padding: 10px;
+    margin-bottom: 15px; /* Space between form fields */
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Subtle border color */
+}
+
+/* Button styles for primary action */
+button.btn-primary {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Comfortable padding */
+    font-size: 16px; /* Larger font size for easier reading */
+    border: none; /* Remove default border */
+    background-color: #0056b3; /* Slightly darker blue than default Bootstrap primary */
+    color: white;
+}
+
+button.btn-primary:hover {
+    background-color: #004085; /* Darken button on hover for visual feedback */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        font-size: 16px; /* Smaller font size on mobile */
+    }
+
+    main .container {
+        margin-top: 20px; /* Less vertical space on mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General body styling */
+body {
+    background-color: #f8f9fa; /* Light gray background */
+    font-family: 'Arial', sans-serif; /* Clean, readable font */
+    color: #333; /* Text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the login container */
+.container {
+    margin-top: 50px;
+}
+
+/* Card styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #ffffff;
+}
+
+/* Card header */
+.card-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px;
+}
+
+/* Form input fields */
+.form-control {
+    height: 45px;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Login button */
+.btn-primary {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Alert styling */
+.alert {
+    font-size: 0.9rem;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-header {
+        font-size: 1.3rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    background-color: #293d52;
+    font-family: Arial, sans-serif;
+}
+.container {
+    margin-top: 80px;
+}
+.card {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+.form-group label {
+    font-weight: bold;
+}
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+.alert {
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.basket-product-image {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.quantity-btn, .btn {
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.total-price, .checkout {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.total-price {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.btn-success {
+    background-color: #28a745; /* Bootstrap success color */
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+
+

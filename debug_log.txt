@@ -1,0 +1,69 @@
+Session started
+Session started
+Session started
+Session started
+POST request received
+CSRF validation failed
+Session started
+POST request received
+CSRF validation failed
+Session started
+POST request received
+CSRF validation failed
+Session started
+Session started
+POST request received
+Database connected
+Session started
+POST request received
+Database connected
+Session started
+Session started
+POST request received
+Database connected
+Session started
+POST request received
+Database connected
+Session started
+Session started
+Session started
+Session started
+POST request received
+Database connected
+Authentication failed
+Session started
+POST request received
+CSRF validation failed
+Session started
+POST request received
+CSRF validation failed
+Session started
+Session started
+POST request received
+CSRF validation failed
+Session started
+POST request received
+CSRF validation failed
+Session started
+POST request received
+CSRF validation failed
+Session started
+POST request received
+CSRF validation failed
+Session started
+POST request received
+CSRF validation failed
+Session started
+Session started
+POST request received
+CSRF validation failed
+Session started
+POST request received
+CSRF validation failed
+Session started
+Session started
+POST request received
+CSRF validation failed
+Session started
+POST request received
+CSRF validation failed
