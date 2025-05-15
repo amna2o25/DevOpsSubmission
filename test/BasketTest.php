@@ -2,16 +2,16 @@
 // test/BasketTest.php
 
 use PHPUnit\Framework\TestCase;
-use MyApp\BasketManager; // replace with your actual namespace
+use MyApp\Basket;
 
 class BasketTest extends TestCase
 {
-    private BasketManager $basket;
+    private Basket $basket;
 
     protected function setUp(): void
     {
-        // e.g. clear session or inject a fresh basket
-        $this->basket = new BasketManager();
+        // inject a fake product catalog or use an in-memory store
+        $this->basket = new Basket(/* …dependencies… */);
     }
 
     public function testAddItemIncreasesCount(): void
