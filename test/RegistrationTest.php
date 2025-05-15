@@ -12,7 +12,7 @@ class RegistrationTest extends TestCase
     protected function setUp(): void
     {
         // inject a fake user repository or use an in-memory DB
-        $this->reg = new UserRegistrar(/* … */);
+        $this->reg = new UserRegistrar(/* …dependencies… */);
     }
 
     public function testValidRegistrationReturnsUserId(): void
@@ -21,12 +21,14 @@ class RegistrationTest extends TestCase
             'email'    => 'foo@example.com',
             'password' => 'Password123!',
         ]);
+
         $this->assertIsInt($userId);
     }
 
     public function testRegistrationThrowsOnInvalidEmail(): void
     {
         $this->expectException(ValidationException::class);
+
         $this->reg->register([
             'email'    => 'not-an-email',
             'password' => 'Password123!',
