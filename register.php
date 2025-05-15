@@ -118,6 +118,3 @@ ob_end_flush();
 <br>
 <br>
 <br>
-<br>
-</html><footer class="footer mt-auto py-3 bg-dark text-white text-center">
-<p>&copy; 2024 Tyne Brew Coffee</p><br>
