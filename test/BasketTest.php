@@ -27,5 +27,10 @@ class BasketTest extends TestCase
         $this->assertEquals(0, $this->basket->getItemCount());
     }
 
-
-    
+    public function testGetTotalCalculatesCorrectly(): void
+    {
+        // assume price of widget = 10.50
+        $this->basket->addItem('widget', 2);
+        $this->assertEquals(21.00, $this->basket->getTotal());
+    }
+}
